@@ -1,0 +1,6 @@
+{
+  "name": "VLX Tools",
+  "description": "A comprehensive office and student productivity suite featuring an interactive AI Document Builder with professional visual styling modes, raw Excel data parsers, anonymous student feedback hubs, and upcoming study companion guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

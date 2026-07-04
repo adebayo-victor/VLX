@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLX Tools Portal</title>
+    <!-- Include Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50/50 flex flex-col min-h-screen antialiased text-gray-800">
+
+    <!-- Header Bar -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-2 group">
+                <div class="text-3xl font-black tracking-tighter leading-none flex select-none">
+                    <span class="text-red-600">V</span>
+                    <span class="text-blue-600">L</span>
+                    <span class="text-emerald-500">X</span>
+                </div>
+                <span class="text-xl font-extrabold text-gray-900 tracking-tight">Tools</span>
+            </a>
+            
+            <nav class="flex space-x-6 text-sm font-semibold text-gray-600">
+                <a href="/" class="text-blue-600 hover:text-blue-700 transition">Portal</a>
+                <a href="/survey_admin" class="hover:text-blue-600 transition">Feedback Board</a>
+                <a href="https://wa.me/2348136390030" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-600 transition flex items-center">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+                    Support
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-white border-b border-gray-100 py-16 md:py-24">
+            <div class="absolute inset-0 bg-gradient-to-tr from-indigo-50/20 via-emerald-50/10 to-rose-50/10 opacity-70"></div>
+            <div class="max-w-4xl mx-auto text-center px-4 relative z-10 space-y-6">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 tracking-tight leading-tight">
+                    Empower Your Work with <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-500">VLX Tools!</span>
+                </h1>
+                <p class="text-gray-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light">
+                    Your ultimate suite for private communication, intelligent raw data parsing, structural document generation, and campus action response systems.
+                </p>
+                <div class="pt-2 flex justify-center space-x-3">
+                    <a href="/excel_maker" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm shadow-sm transition">
+                        Open AI Excel Maker
+                    </a>
+                    <a href="/pdf_maker" class="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl text-sm transition">
+                        Create Documents
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Grid Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-black text-gray-900 tracking-tight">Our Specialized Tools</h2>
+                <p class="text-gray-500 text-sm max-w-lg mx-auto">Choose an active module below to initialize its service instantly.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Excel Tool -->
+                <a href="/excel_maker" class="p-6 rounded-2xl border border-gray-200 bg-white hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/5 transition duration-300 flex flex-col justify-between h-64 group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="p-3 rounded-xl bg-emerald-50 text-emerald-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full border bg-emerald-100 text-emerald-700 border-emerald-200">Available Now</span>
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-lg font-extrabold text-gray-900 group-hover:text-emerald-600 transition">AI-Powered Excel Maker</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed font-medium">Instantly compile formatted spreadsheet files from messy copy-pasted text using advanced semantic AI grouping.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs font-bold text-gray-400 group-hover:text-emerald-600 transition mt-2">
+                        <span>Open tool</span>
+                        <svg class="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </a>
+
+                <!-- PDF Tool -->
+                <a href="/pdf_maker" class="p-6 rounded-2xl border border-gray-200 bg-white hover:border-indigo-500 hover:shadow-lg hover:shadow-indigo-500/5 transition duration-300 flex flex-col justify-between h-64 group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="p-3 rounded-xl bg-indigo-50 text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full border bg-indigo-100 text-indigo-700 border-indigo-200">Available Now</span>
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-lg font-extrabold text-gray-900 group-hover:text-indigo-600 transition">PDF & Document Builder</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed font-medium">Generate letterheads, legal agreements, internal memos, certificates, and lists styled by premium template options.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs font-bold text-gray-400 group-hover:text-indigo-600 transition mt-2">
+                        <span>Open tool</span>
+                        <svg class="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </a>
+
+                <!-- Anonymous messages -->
+                <a href="/message" class="p-6 rounded-2xl border border-gray-200 bg-white hover:border-purple-500 hover:shadow-lg hover:shadow-purple-500/5 transition duration-300 flex flex-col justify-between h-64 group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="p-3 rounded-xl bg-purple-50 text-purple-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full border bg-purple-100 text-purple-700 border-purple-200">Available Now</span>
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-lg font-extrabold text-gray-900 group-hover:text-purple-600 transition">Anonymous Message Inbox</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed font-medium">Deliver completely private, secure notes directly to Vicade with optional WhatsApp contact for premium response paths.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs font-bold text-gray-400 group-hover:text-purple-600 transition mt-2">
+                        <span>Open tool</span>
+                        <svg class="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </a>
+
+                <!-- Student feedback -->
+                <a href="/survey_admin" class="p-6 rounded-2xl border border-gray-200 bg-white hover:border-rose-500 hover:shadow-lg hover:shadow-rose-500/5 transition duration-300 flex flex-col justify-between h-64 group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="p-3 rounded-xl bg-rose-50 text-rose-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full border bg-rose-100 text-rose-700 border-rose-200">Available Now</span>
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-lg font-extrabold text-gray-900 group-hover:text-rose-600 transition">Student Feedback Board</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed font-medium">Track campus problem reports, raise general awareness, and help our administrators isolate infrastructure issues.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs font-bold text-gray-400 group-hover:text-rose-600 transition mt-2">
+                        <span>Open tool</span>
+                        <svg class="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </a>
+
+                <!-- Bookshop Teaser -->
+                <a href="/bookshop" class="p-6 rounded-2xl border border-gray-200 bg-white hover:border-amber-500 hover:shadow-lg hover:shadow-amber-500/5 transition duration-300 flex flex-col justify-between h-64 group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="p-3 rounded-xl bg-amber-50 text-amber-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full border bg-amber-100 text-amber-700 border-amber-200">Teaser / Preview</span>
+                        </div>
+                        <div class="space-y-1.5">
+                            <h3 class="text-lg font-extrabold text-gray-900 group-hover:text-amber-600 transition">Alpha Bookshop</h3>
+                            <p class="text-xs text-gray-500 leading-relaxed font-medium">Highly anticipated study engine helper that structures summaries and voice lectures automatically from course syllabi.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center text-xs font-bold text-gray-400 group-hover:text-amber-600 transition mt-2">
+                        <span>Open preview</span>
+                        <svg class="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-1 transition duration-150" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Professional Pillars -->
+        <section class="bg-white border-t border-b border-gray-150 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-black text-gray-900 tracking-tight">Standard Pillars of VLX</h2>
+                    <p class="text-gray-500 text-sm max-w-lg mx-auto">Engineered to secure, optimize, and organize administrative and education portals.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 bg-gray-50/50 border border-gray-100 rounded-xl space-y-3">
+                        <div class="p-2.5 rounded-lg w-fit text-red-600 bg-red-50">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-extrabold text-gray-900 text-base">Unmatched Speed</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-medium">Asynchronous processing queues and optimized APIs yield zero idle time.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50/50 border border-gray-100 rounded-xl space-y-3">
+                        <div class="p-2.5 rounded-lg w-fit text-blue-600 bg-blue-50">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h4 class="font-extrabold text-gray-900 text-base">Client Isolation</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-medium">We securely strip browser telemetry and user footprint variables from messages.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50/50 border border-gray-100 rounded-xl space-y-3">
+                        <div class="p-2.5 rounded-lg w-fit text-emerald-600 bg-emerald-50">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-extrabold text-gray-900 text-base">Dynamic Structuring</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-medium">Seamless CSV, HTML styling and Excel generation automatically rendered from raw text.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50/50 border border-gray-100 rounded-xl space-y-3">
+                        <div class="p-2.5 rounded-lg w-fit text-purple-600 bg-purple-50">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-11.314l.707.707m11.314 11.314l.707-.707M4 12a8 8 0 1116 0 8 8 0 01-16 0z"></path></svg>
+                        </div>
+                        <h4 class="font-extrabold text-gray-900 text-base">Perfect Portability</h4>
+                        <p class="text-xs text-gray-500 leading-relaxed font-medium">Runs natively in light off-white mode using standard web parameters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-center gap-4 text-xs font-medium text-gray-500">
+            <div>
+                &copy; 2026 VLX Tools. Powered by <span class="font-bold text-blue-600 hover:underline">TechLite</span>. All rights reserved.
+            </div>
+            <div class="flex space-x-4">
+                <a href="/" class="hover:text-gray-800">About Portal</a>
+                <span>&middot;</span>
+                <a href="/survey_admin" class="hover:text-gray-800 font-semibold">Campus Admin</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
