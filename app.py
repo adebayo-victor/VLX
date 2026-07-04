@@ -153,10 +153,6 @@ def survey_admin():
 def pdf_maker():
     return render_template("pdf_maker.html")
 
-@app.route("/bookshop")
-def bookshop():
-    return render_template("bookshop.html")
-
 @app.route("/expired")
 def expired():
     return render_template("expired.html")
@@ -337,7 +333,7 @@ def doc_maker():
 Generate exactly 3 distinct stylistic visual HTML templates for an official {doc_type.upper()} document using the inputs below.
 Each template must be a completely valid, standalone, highly styled HTML document (including <html>, <head>, <style>, <body>) containing headers, beautiful letterheads, content layout structure, tracking, clear grids/borders, custom color palettes, and signature grids as appropriate.
 
-Include 'Powered by VLX Tools' and 'Made with TechLite' subtly at the footer of each option.
+Include the exact phrase 'Made with VLX Tools, Powered by TechLite' subtly and professionally styled in the footer of each option.
 
 You MUST generate 3 options matching these visual design moods:
 1. 'Executive Professional' - Sleek corporate letterhead layout, dark navy/slate accents, formal typography.
