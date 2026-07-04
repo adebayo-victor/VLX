@@ -18,7 +18,6 @@ CORS(app)
 
 # SQLite Databases Paths
 FEEDBACK_DB = "feedback.db"
-MESSAGES_DB = "messages.db"
 DOCUMENTS_DB = "documents.db"
 
 # Helper function to get database connection
@@ -45,21 +44,7 @@ def init_databases():
     conn.commit()
     conn.close()
 
-    # 2. Anonymous Messages Database
-    conn = sqlite3.connect(MESSAGES_DB)
-    cursor = conn.cursor()
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS anonymous_messages (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            content TEXT NOT NULL,
-            phone_number TEXT,
-            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
-        )
-    """)
-    conn.commit()
-    conn.close()
-
-    # 3. Documents Database
+    # 2. Documents Database
     conn = sqlite3.connect(DOCUMENTS_DB)
     cursor = conn.cursor()
     cursor.execute("""
@@ -137,10 +122,6 @@ def call_gemini_api(prompt, system_instruction=None, response_schema=None):
 def index():
     return render_template("index.html")
 
-@app.route("/message")
-def message():
-    return render_template("message.html")
-
 @app.route("/excel_maker")
 def excel_maker():
     return render_template("excel_maker.html")
@@ -161,42 +142,6 @@ def expired():
 # -------------------------------------------------------------
 # API ROUTE ENDPOINTS
 # -------------------------------------------------------------
-
-# Submit anonymous messaging
-@app.route("/submit_msg", methods=["POST"])
-def submit_msg():
-    content = request.json.get("content")
-    phone_number = request.json.get("phone_number")
-
-    if not content:
-        return jsonify({"error": "Message content is required"}), 400
-
-    try:
-        conn = get_db_connection(MESSAGES_DB)
-        cursor = conn.cursor()
-        cursor.execute(
-            "INSERT INTO anonymous_messages (content, phone_number) VALUES (?, ?)",
-            (content, phone_number)
-        )
-        conn.commit()
-        conn.close()
-        return jsonify({"response": "successful"})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-# Fetch all messages (for the public logs or admin view)
-@app.route("/fetch_messages", methods=["GET"])
-def fetch_messages():
-    try:
-        conn = get_db_connection(MESSAGES_DB)
-        rows = conn.execute("SELECT * FROM anonymous_messages ORDER BY id DESC").fetchall()
-        conn.close()
-
-        messages = [dict(row) for row in rows]
-        return jsonify(messages)
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
 
 # Submit campus feedback survey anonymously
 @app.route("/submit_survey", methods=["POST"])
