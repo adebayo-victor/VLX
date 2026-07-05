@@ -76,8 +76,8 @@ def call_gemini_api(prompt, system_instruction=None, response_schema=None):
     if not api_key:
         raise ValueError("GEMINI_API_KEY is not set. Please set it as an environment variable.")
 
-    # We use gemini-1.5-flash which is widely supported, fast and cost-effective
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+    # We use gemini-3.5-flash which is widely supported, fast and cost-effective
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={api_key}"
     
     headers = {
         "Content-Type": "application/json"
@@ -271,7 +271,9 @@ def doc_maker():
         system_instructions = (
             "You are an elite, senior typography developer and full-stack template layout expert. "
             "You write highly polished, self-contained HTML templates styled with professional inline "
-            "CSS (inside <style> blocks) suitable for printing or PDF exports in A4 sizing."
+            "CSS (inside <style> blocks) suitable for printing or PDF exports in A4 sizing. "
+            "IMPORTANT: All monetary values, prices, budgets, or costs in the generated document "
+            "MUST be formatted and displayed using the Nigerian Naira currency symbol (₦) instead of other symbols like $."
         )
 
         prompt = f"""
